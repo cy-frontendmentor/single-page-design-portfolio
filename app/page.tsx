@@ -1,11 +1,15 @@
+import Slider from "../components/slider/slider";
 import Header from "../components/UI/header";
 import SelfIntroduction from "../components/UI/selfIntrodcution";
 const page = () => {
   return (
-    <div className="grid justify-center gap-y-[100px] p-4 md:px-[39px] md:pt-[34px] md:pb-[56px]">
-      <Header></Header>
-      <SelfIntroduction></SelfIntroduction>
-    </div>
+    <>
+      <div className="grid justify-center gap-y-[100px] p-4 md:px-[39px] md:pt-[34px] md:pb-[56px]">
+        <Header></Header>
+        <SelfIntroduction></SelfIntroduction>
+      </div>
+      <Slider></Slider>
+    </>
   );
 };
 

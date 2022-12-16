@@ -25,7 +25,7 @@ const Header = () => {
           <h1 className="lg:heading-l text-4xl font-bold text-black md:text-[44px]">
             Design solutions made easy
           </h1>
-          <p className=" max-w-[573px] text-base font-medium leading-[26px] md:text-lg">
+          <p className=" mx-auto max-w-[573px] text-base font-medium leading-[26px] md:text-lg">
             With over ten years of experience in various design disciplines, I’m
             your one-stop shop for your design needs.
           </p>
