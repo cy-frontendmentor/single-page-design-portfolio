@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-cream-light text-lg text-brown-medium;
+  }
+}
+
+@layer utilities {
+  .heading-l {
+    @apply text-[56px] font-bold leading-[70px] text-black;
+  }
+  .heading-m {
+    @apply text-[40px] font-bold leading-[51px] text-black;
+  }
+  .heading-s {
+    @apply text-[32px] font-bold leading-[40px] text-black;
+  }
+  .roy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(158px, auto));
+  }
+}
