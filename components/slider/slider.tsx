@@ -34,7 +34,7 @@ const IMAGES = [
 ];
 
 const Slider = () => {
-  const [currentSlide, setCurrentSlide] = useState(1);
+  const [currentSlide, setCurrentSlide] = useState(2);
   const [images, setImages] = useState(IMAGES);
   const slideLeftController = () => {
     setCurrentSlide((currentSlide) => currentSlide - 1);
@@ -59,16 +59,28 @@ const Slider = () => {
   return (
     <div className=" grid w-full justify-items-center gap-y-8 text-center">
       <p className=" text-2xl font-bold text-black">My Work</p>
-      <div className="relative h-[180px] w-full overflow-hidden">
-        {images.map((image) => (
-          <div key={image.id} className="absolute transition-all">
-            <div
-              className={`relative h-[180px] w-[270px] overflow-hidden rounded-[10px] ${image.transition}`}
-            >
-              <Image src={image.url} alt="" fill></Image>
+      <div className="flex h-[180px] w-full overflow-hidden">
+        <div className="relative">
+          {/* {images.map((image) => (
+            <div key={image.id} className="absolute transition-all">
+              <div
+                className={`relative h-[180px] w-[270px] overflow-hidden rounded-[10px] ${image.transition}`}
+              >
+                <Image src={image.url} alt="" fill></Image>
+              </div>
             </div>
+          ))} */}
+          <div className="flex space-x-[30px]">
+            {IMAGES.map((image) => (
+              <div
+                className={`relative h-[180px] w-[270px] overflow-hidden rounded-[10px] `}
+                key={image.id}
+              >
+                <Image src={image.url} alt="" fill></Image>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
       <div className="flex space-x-4">
         <button
